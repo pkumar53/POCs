@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><portlet-properties>
+    <portlet name="BasicSample">
+        <property>
+            <name>DEFAULT_PAGE</name>
+            <value>/_BasicSample/jsp/html/BasicSamplePortletView.jsp</value>
+        </property>
+    </portlet>
+</portlet-properties>
