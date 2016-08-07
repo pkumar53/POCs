@@ -1,10 +1,11 @@
+<%@page import="javax.portlet.PortletSession"%>
 <%@page import="com.portlet.session.poc.beans.StudentBean"%>
 <%@page language="java"
 	contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
 <portlet:defineObjects />
 <%
-StudentBean bean = (StudentBean)renderRequest.getPortletSession().getAttribute("portletScopeStudentBean");
+StudentBean bean = (StudentBean)renderRequest.getPortletSession().getAttribute("appScopeStudentBean", PortletSession.APPLICATION_SCOPE);
 %>
 <form action='<portlet:actionURL portletMode="VIEW"/>' >
 	<table>

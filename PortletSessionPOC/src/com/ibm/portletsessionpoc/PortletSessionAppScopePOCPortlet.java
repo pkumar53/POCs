@@ -9,8 +9,8 @@ import com.portlet.session.poc.beans.StudentBean;
 /**
  * A sample portlet
  */
-public class PortletSessionPOCPortlet extends javax.portlet.GenericPortlet {
-	private static final String STUDENT_BEAN = "portletScopeStudentBean";
+public class PortletSessionAppScopePOCPortlet extends javax.portlet.GenericPortlet {
+	private static final String STUDENT_BEAN = "appScopeStudentBean";
 
 
 
@@ -30,7 +30,7 @@ public class PortletSessionPOCPortlet extends javax.portlet.GenericPortlet {
 		response.setContentType(request.getResponseContentType());
 
 		// Invoke the JSP to render, replace with the actual jsp name
-		final PortletRequestDispatcher rd = getPortletContext().getRequestDispatcher("/jsp/html/PortletSessionPOCPortletView.jsp");
+		final PortletRequestDispatcher rd = getPortletContext().getRequestDispatcher("/jsp/html/PortletSessionAppScopePOCPortletView.jsp");
 		rd.include(request,response);
 	}
 
@@ -45,12 +45,12 @@ public class PortletSessionPOCPortlet extends javax.portlet.GenericPortlet {
 		if (session == null) {
 			//error page
 		}
-		StudentBean bean = (StudentBean) session.getAttribute(STUDENT_BEAN);
+		StudentBean bean = (StudentBean) session.getAttribute(STUDENT_BEAN, PortletSession.APPLICATION_SCOPE);
 		if (bean == null) {
 			bean = new StudentBean();
-			session.setAttribute(STUDENT_BEAN, bean);
+			session.setAttribute(STUDENT_BEAN, bean, PortletSession.APPLICATION_SCOPE);
 		}
-		final PortletRequestDispatcher rd = getPortletContext().getRequestDispatcher("/jsp/html/PortletSessionPOCPortletEdit.jsp");
+		final PortletRequestDispatcher rd = getPortletContext().getRequestDispatcher("/jsp/html/PortletSessionAppScopePOCPortletEdit.jsp");
 		rd.include(request, response);
 	}
 
@@ -73,7 +73,7 @@ public class PortletSessionPOCPortlet extends javax.portlet.GenericPortlet {
 		if (session == null) {
 			//error page
 		}
-		StudentBean bean = (StudentBean) session.getAttribute(STUDENT_BEAN);
+		StudentBean bean = (StudentBean) session.getAttribute(STUDENT_BEAN, PortletSession.APPLICATION_SCOPE);
 		if (bean != null) {
 			final String firstName = request.getParameter("firstName");
 			final String lastName = request.getParameter("lastName");

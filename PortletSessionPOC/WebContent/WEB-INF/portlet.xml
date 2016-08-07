@@ -23,5 +23,28 @@
 			<keywords>PortletSessionPOC</keywords>
 		</portlet-info>
 	</portlet>
+	<portlet>
+		<portlet-name>PortletSessionAppScopePOC</portlet-name>
+		<display-name>PortletSessionAppScopePOC</display-name>
+		<display-name xml:lang="en">PortletSessionAppScopePOC</display-name>
+		<portlet-class>com.ibm.portletsessionpoc.PortletSessionAppScopePOCPortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<resource-bundle>com.ibm.portletsessionpoc.nl.PortletSessionAppScopePOCPortletResource</resource-bundle>
+		<portlet-info>
+			<title>PortletSessionAppScopePOC</title>
+			<short-title>PortletSessionAppScopePOC</short-title>
+			<keywords>PortletSessionAppScopePOC</keywords>
+		</portlet-info>
+	</portlet>
 	<default-namespace>http://PortletSessionPOC/</default-namespace>
 </portlet-app>
