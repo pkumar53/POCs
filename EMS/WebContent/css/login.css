@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+
+#leftpane {
+	float: left;
+	min-height: inherit;
+	width: 60%;
+	background-color: #f1fff1;
+}
+
+#rightpane {
+	float: left;
+	width: 40%;
+	min-height: inherit;
+	background-color: #f1fff1;
+}
+
+#rightpane h1 {
+	text-align: center;
+	color: #3f5188;
+	margin-bottom: 100px;]
+}
+
+.inputDiv {
+	height: 30px;
+	margin: 10px 140px;
+	width: 100%;
+	color: #3f5188;
+}
+
+.inputDiv label {
+	float: left;
+	width: 100px;
+}
+
+.inputDiv button {
+    background-color: #3f5188;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 100px;
+    padding: 2px 13px;
+}

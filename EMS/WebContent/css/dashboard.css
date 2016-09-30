@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+.listdiv {
+	padding: 10px;
+}
+
+.listtable {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.listtable th {
+	background-color: #a2c3cc;
+	border: 1px solid #76b8b0;
+	padding: 10px;
+}
+
+.listtable td {
+	border: 1px solid #76b8b0;
+	text-align: center;
+}
+
+.listtable td a {
+	text-decoration: none;
+}
+
+.listtable tr {
+	background-color: #ebe4ff;
+}

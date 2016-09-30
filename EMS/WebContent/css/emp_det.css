@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+#mainContent div.empDet {
+	width: 80%;
+	float: left;
+	margin-left: 20px;
+}
+
+#mainContent img {
+	height: 216px;
+	border: 1px solid;
+	margin: 40px;
+}
+
+.columnfix.label {
+	margin-left: 40px;
+    width: 350px;
+}
+.columnfix.data {
+	border-left: 1px dotted;
+    padding-left: 40px;
+}
